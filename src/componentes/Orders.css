@@ -1,0 +1,105 @@
+.orders-container {
+    padding: 20px;
+    background-color: #1a202c;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .order-header {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .order-card {
+    background-color: #1a202c;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .order-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .order-title {
+    font-size: 20px;
+    color: white;
+  }
+  
+  .order-date, .order-items-title, .order-status {
+    color: white;
+    font-size: 14px;
+  }
+  
+  .order-items {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  .order-item {
+    margin-bottom: 5px;
+  }
+  
+  .order-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .order-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .order-btn.default {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .order-btn.default:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+  }
+  
+  .order-btn.ready {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .order-btn.ready:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+  }
+  
+  .order-btn.preparing {
+    background-color: #ff9800;
+    color: #fff;
+  }
+  
+  .order-btn.preparing:hover {
+    background-color: #fb8c00;
+    transform: scale(1.05);
+  }
+  
+  .order-status {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  
+    

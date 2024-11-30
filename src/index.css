@@ -1,0 +1,445 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1a202c; /* Fondo oscuro para toda la página */
+  color: #f7fafc; /* Texto blanco suave */
+  font-family: 'Inter', sans-serif; /* Fuente limpia y moderna */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  border-radius: 12px;
+  color: #fff;
+  height: 150px;
+  width: 100%;
+  position: relative;
+  background-image: url('/src/assets/images/fondo.png');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7); /* Oscurecer ligeramente el fondo */
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-image {
+  max-width: 120px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.navbar-logout {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logout-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #e53e3e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #c53030;
+  transform: scale(1.05); /* Efecto sutil de ampliación */
+}
+
+/* Contenedor de las tarjetas */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+  }
+}
+
+/* Estilo de las tarjetas */
+.card {
+  border-radius: 10px;
+  padding: 1.5rem;
+  background-color: #2d3748; /* Fondo oscuro para las tarjetas */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #f7fafc; /* Títulos en blanco */
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  color: #e2e8f0; /* Descripción en gris claro */
+  margin-bottom: 1rem;
+}
+
+.card-price {
+  font-weight: bold;
+  color: #38a169; /* Verde moderno */
+  margin-bottom: 1rem;
+}
+
+.card-status {
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.status-available {
+  color: #3182ce; /* Azul brillante */
+}
+
+.status-unavailable {
+  color: #e53e3e; /* Rojo brillante */
+}
+
+/* Botones en las tarjetas */
+.card-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 9999px; /* Botones redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-button-unavailable {
+  background-color: #ecc94b;
+  color: white;
+}
+
+.card-button-unavailable:hover {
+  background-color: #d69e2e;
+  transform: scale(1.05);
+}
+
+.card-button-delete {
+  background-color: #e53e3e;
+  color: white;
+}
+
+.card-button-delete:hover {
+  background-color: #c53030;
+  transform: scale(1.05);
+}
+
+/* Contenedor de AddProduct */
+.add-product-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #2d3748; /* Fondo oscuro */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.add-product-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #f7fafc;
+}
+
+/* Formulario AddProduct */
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Inputs */
+.form-input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 4px rgba(49, 130, 206, 0.5);
+}
+
+/* Botones de formularios */
+.form-button-save {
+  background-color: #38a169;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px; /* Botón redondeado */
+  transition: background-color 0.3s ease;
+}
+
+.form-button-save:hover {
+  background-color: #2f855a;
+}
+
+.form-button-cancel {
+  background-color: #ddd;
+  color: #333;
+  padding: 12px 24px;
+  border-radius: 50px;
+}
+
+.form-button-cancel:hover {
+  background-color: #bbb;
+}
+
+/* User History Section */
+.user-history-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #2d3748; /* Fondo oscuro */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.user-history-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #f7fafc;
+}
+
+.user-history-search-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-history-search-button:hover {
+  background-color: #c53030;
+}
+
+/* Cards in User History */
+.user-history-cards {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .user-history-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  border-radius: 10px;
+  padding: 1.5rem;
+  background-color: #f9fafb; /* Fondo muy claro para las tarjetas */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.user-history-clear-button {
+  display: block;
+  margin: 2rem auto;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-history-clear-button:hover {
+  background-color: #c53030;
+}
+
+/* Switch Button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* Contenedor de las tarjetas */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Una columna en pantallas pequeñas */
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #1a202c; /* Fondo negro para el contenedor */
+}
+
+@media (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+  }
+}
+
+/* Estilo de las tarjetas */
+.card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color:#1a202c; /* Fondo negro para las tarjetas */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #f7fafc; /* Títulos en blanco */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card-description {
+  color: #e2e8f0; /* Descripción en gris claro */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.card-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-button:hover {
+  transform: scale(1.05); /* Efecto sutil de ampliación */
+}
+
+/* Botón amarillo para "Agregar" */
+.card-button-add {
+  background-color: #ecc94b !important; /* Amarillo */
+  color: #fff;
+}
+
+.card-button-add:hover {
+  background-color: #d69e2e !important; /* Más oscuro al pasar el mouse */
+}
+
+/* Botón rojo para "Eliminar" */
+.card-button-delete {
+  background-color: #e53e3e; /* Rojo */
+  color: #fff;
+}
+
+.card-button-delete:hover {
+  background-color: #c53030;
+}
